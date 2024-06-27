@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/menu page/style.css" />
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- icon cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- moving images -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <title>MAVERICK LABEL PAGE</title>
+  </head>
+  <style>
+    .x-icon {
+      display: none;
+    }
+    @media screen and (max-width: 768px) {
+      .menu-nav {
+        background-color: #fff;
+        box-shadow: 10px -10px 5px #ccc;
+        width: 0;
+        overflow: hidden;
+        transition: width 0.8s, transform 0.8s ease-in-out; /* Slower transition */
+        position: fixed;
+        height: 100vh;
+        z-index: 99;
+        top: 0;
+        left: 0;
+        transform: translateX(-100%);
+        display: block !important;
+        padding: 20px;
+      }
+      .menu-nav li {
+        padding-bottom: 20px;
+      }
+      .check {
+        background-color: red;
+        width: 0;
+        overflow: hidden;
+        transition: width 0.8s, transform 0.8s ease-in-out; /* Slower transition */
+        position: absolute;
+        height: 100vh;
+        left: 0;
+        transform: translateX(-100%); /* Initially off screen */
+      }
+      .x-icon {
+        width: 20px;
+        height: 20px;
+        display: block;
+      }
+
+      .show {
+        width: 200px; /* Adjust this value according to your content */
+        transform: translateX(0); /* Slide in */
+      }
+      .check p {
+        display: block; /* Ensure the content is displayed */
+      }
+    }
+  </style>
+  <body>
+    <div class="top-header">
+      <div class="header-content container text-align">
+        <span class="top-header-strong"> Free Shipping</span> in USA on orders
+        over $50*
+      </div>
+    </div>
+
+    <!-- ==== main-header====== -->
+    <div class="main-header container flex">
+      <div class="header-left flex">
+        <div class="logo">
+          <img src="images/mav-logo.svg" class="logo-img" />
+        </div>
+        <ul class="menu-nav flex">
+          <li class="menu-name flex">
+            <a href="#">Shop By Feature</a> <span class="menu-icon"></span>
+          </li>
+
+          <li class="menu-name flex">
+            <a href="#">Product labels</a> <span class="menu-icon"></span>
+          </li>
+          <li class="menu-name flex">
+            <a href="#">Marketing Labels</a><span class="menu-icon"></span>
+          </li>
+          <li class="menu-name flex">
+            <a href="#">Industrial Labels</a><span class="menu-icon"></span>
+          </li>
+          <li class="menu-name flex">
+            <a href="#">Office Labels</a><span class="menu-icon"></span>
+          </li>
+          <li class="menu-name flex">
+            <a href="#">More</a><span class="menu-icon"></span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="header-right flex">
+        <a href="#">
+          <img src="images/Search Icon.png" alt="" />
+        </a>
+        <a href="#">
+          <img src="images/Account Icon.png" alt="" />
+        </a>
+        <a href="#">
+          <img src="images/Cart Icon.png" alt="" />
+        </a>
+
+        <a href="#">
+          <img
+            src="images/hamburger.png"
+            alt=""
+            class="hamburger-icon"
+            onclick="toggleMenu(this)"
+          />
+        </a>
+        <svg
+          class="x-icon"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 384 512"
+        >
+          <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+          <path
+            d="M376.6 84.5c11.3-13.6 9.5-33.8-4.1-45.1s-33.8-9.5-45.1 4.1L192 206 56.6 43.5C45.3 29.9 25.1 28.1 11.5 39.4S-3.9 70.9 7.4 84.5L150.3 256 7.4 427.5c-11.3 13.6-9.5 33.8 4.1 45.1s33.8 9.5 45.1-4.1L192 306 327.4 468.5c11.3 13.6 31.5 15.4 45.1 4.1s15.4-31.5 4.1-45.1L233.7 256 376.6 84.5z"
+          />
+        </svg>
+      </div>
+    </div>
+    <!-- body content -->
+    <div class="banner-container flex">
+      <div class="wrapper-content-banner">
+        <div class="banner-content flex">
+          <div class="banner-heading">
+            Maximize Efficiency with Custom Asset Tags
+          </div>
+          <p>
+            Exceptional Quality, Free Logo Design, and Rapid Proofing with
+            Custom Asset Tags
+          </p>
+          <span class="banner-btn text-align"
+            ><a href="#" class="banner-btn">Buy Now</a></span
+          >
+        </div>
+      </div>
+      <div class="banner-image">
+        <img
+          src="/menu page/images/main-banner.png"
+          class="desktop-banner-image"
+          alt=""
+        />
+        <img
+          src="/menu page/images/mobile-view-main-banner.png"
+          class="mobile-banner-image"
+        />
+      </div>
+    </div>
+
+    <div class="whole-container">
+      <div class="product-container container">
+        <h2 class="text-align">Most Popular Labels</h2>
+        <div class="product-box">
+          <div class="product-details flex">
+            <a href="#">
+              <img
+                src="/menu page/images/p1.png"
+                alt=""
+                class="pro-img"
+                data-aos="zoom-in-up"
+              />
+              <div class="content">
+                <h3>Asset Tags </h3>
+                <p>
+                  Asset tags are labels applied to physical assets for easy
+                  tracking. Our high-quality tags are durable, resistant to
+                  environmental factors, and ensure long-term legibility. 
+                </p>
+                <span class="prod-item-btn text-align"> Learn More</span>
+              </div>
+            </a>
+          </div>
+          <div class="product-details flex">
+            <a href="#">
+              <img
+                src="/menu page/images/p2.png"
+                alt=""
+                class="pro-img"
+                data-aos="zoom-in-up"
+              />
+              <div class="content">
+                <h3>Equipment Labels </h3>
+                <p>
+                  Durable enough to handle the most demanding indoor and outdoor
+                  applications. Materials and adhesives stand up to extreme
+                  temperatures, weather, abrasions and more.  
+                </p>
+                <span class="prod-item-btn text-align"> Learn More</span>
+              </div>
+            </a>
+          </div>
+          <div class="product-details flex">
+            <a href="#">
+              <img
+                src="/menu page/images/p3.png"
+                alt=""
+                class="pro-img"
+                data-aos="zoom-in-up"
+              />
+              <div class="content">
+                <h3>Process Color</h3>
+                <p>
+                  Great for applications needing accurate colors and precision,
+                  giving a polished and professional look to product labels.  
+                </p>
+                <span class="prod-item-btn text-align"> Learn More</span>
+              </div>
+            </a>
+          </div>
+
+          <div class="product-details flex">
+            <a href="#">
+              <img
+                src="/menu page/images/p4.png"
+                alt=""
+                class="pro-img"
+                data-aos="zoom-in-up"
+              />
+              <div class="content">
+                <h3>Anniversary Seal Labels</h3>
+                <p>
+                  You can choose from 12 different designs for Anniversary
+                  Seals, which come in gold or silver foil. The seals are
+                  embossed to give a luxurious 3D effect.
+                </p>
+                <span class="prod-item-btn text-align"> Learn More</span>
+              </div>
+            </a>
+          </div>
+          <div class="product-details flex">
+            <a href="#">
+              <img
+                src="/menu page/images/p5.png"
+                alt=""
+                class="pro-img"
+                data-aos="zoom-in-up"
+              />
+              <div class="content">
+                <h3>Affordable Labels</h3>
+                <p>
+                  Our most economical option for spot color labels, choose from
+                  our most popular ink colors, sizes, shapes, and materials. Low
+                  minimum order quantities of just 100 labels. 
+                </p>
+                <span class="prod-item-btn text-align"> Learn More</span>
+              </div>
+            </a>
+          </div>
+          <div class="product-details flex">
+            <a href="#">
+              <img
+                src="/menu page/images/p6.png"
+                alt=""
+                class="pro-img"
+                data-aos="zoom-in-up"
+              />
+              <div class="content">
+                <h3>Custom Tape</h3>
+                <p>
+                  Don't settle for ordinary packaging - make it extraordinary
+                  with our custom packaging tape. Your brand deserves the best,
+                  and we're here to help you achieve it.
+                </p>
+                <span class="prod-item-btn text-align"> Learn More</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="advantage-container text-align">
+          <h3>Our Advantage</h3>
+          <div class="adv-box">
+            <div class="adv-item text-align">
+              <img
+                src="/menu page/images/printing-value.png"
+                alt=""
+                data-aos="zoom-in-up"
+              />
+              <h4>The best label printing value</h4>
+              <p>
+                When you combine multiple label designs on a single sheet of
+                artwork, you can print them all together.
+              </p>
+            </div>
+            <div class="adv-item text-align">
+              <img
+                src="/menu page/images/Layer_2.png"
+                alt=""
+                data-aos="zoom-in-up"
+              />
+              <h4>A wide variety of label and sticker types</h4>
+              <p>
+                Vinyl and polyester labels can hold up to temperature changes,
+                water, abrasion and fading in ways paper can’t. 
+              </p>
+            </div>
+            <div class="adv-item text-align">
+              <img
+                src="/menu page/images/paint-1.png"
+                alt=""
+                data-aos="zoom-in-up"
+              />
+              <h4>Custom labels, stock labels, and more</h4>
+              <p>
+                If you need your labels for safety applications, you can easily
+                pick from approved options 
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- color bg-content -->
+        <div class="color-container container flex">
+          <div class="bg-label-color">
+            <img
+              src="/menu page/images/desktop-img.png"
+              class="desktop-view"
+              data-aos="zoom-in-right"
+            />
+            <img src="/menu page/images/mobile-img.png" class="mobile-view" />
+          </div>
+          <div class="bg-content" data-aos="zoom-in-left">
+            <h2>Why Maverick Label?</h2>
+            <p>
+              Maverick Label is dedicated to offering more than any other label
+              company. This means more label types, more customization options,
+              better customer care and easier ordering.<br />
+              Maverick Label is the best choice for custom product label
+              printing. We offer a wide range of printing options such as custom
+              labels, stickers, decals, tags, and more. However complicated your
+              companies needs are, you can get all your labels from one source:
+              Maverick Label.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- sign up -->
+    <div class="signup-container text-align">
+      <p>Sign Up for Exclusive Offer and Savings</p>
+      <form class="subscribe-btn">
+        <input
+          type="text"
+          placeholder="Enter your email"
+          class="email-input"
+          required
+        />
+        <a href="mailto:">
+          <button>Subscribe</button>
+        </a>
+      </form>
+    </div>
+
+    <footer>
+      <div class="footer-1">
+        <div class="site-container">
+          <div class="footer-1-content flex">
+            <img
+              src="/menu page/images/mav-logo-grey.svg"
+              alt=""
+              class="footer-logo"
+            />
+            <p>
+              Any Label you need, anywhere in the World, at the Right Price &
+              Fast...
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-2">
+        <div class="site-container">
+          <div class="footer-2-content flex">
+            <div class="footer-menu">
+              <ul>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Sitemap</a></li>
+              </ul>
+              <ul>
+                <li><a href="#">Our Guarantee</a></li>
+                <li><a href="#">Label Types</a></li>
+                <li><a href="#">Label Printing Blog</a></li>
+              </ul>
+              <ul>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">Security & Privacy Policy</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-contact">
+              <p>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="0.625em"
+                  viewBox="0 0 512 512"
+                >
+                  <path
+                    d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 
+                19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"
+                  ></path>
+                </svg>
+                <a href="#">customercare@mavericklabel.com</a>
+              </p>
+              <p>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="0.625em"
+                  viewBox="0 0 512 512"
+                >
+                  <path
+                    d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 
+            38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 
+            167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"
+                  ></path>
+                </svg>
+                <a href="tel">1-800-537-8816</a>
+              </p>
+              <a href="#" class="footer-btn text-align">Have a Question?</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-3">
+          <div class="site-container">
+            <div class="footer-3-content flex">
+              <div class="copy-righhts">
+                ©1994-2024 MaverickLabel.Com, Inc. 120 W Dayton St. Edmonds, WA
+                98020
+              </div>
+              <div class="social-media-icons flex text-align">
+                <a href="#">
+                  <img
+                    src="/menu page/images/icon/Vector (3).png"
+                    alt=""
+                    class="sm-icon"
+                  />
+                </a>
+                <a href="#">
+                  <img
+                    src="/menu page/images/icon/linkedIn.png"
+                    alt=""
+                    class="sm-icon"
+                  />
+                </a>
+                <a href="#">
+                  <img
+                    src="/menu page/images/icon/instagram.png"
+                    alt=""
+                    class="sm-icon"
+                  />
+                </a>
+                <a href="#">
+                  <img
+                    src="/menu page/images/icon/twitter.png"
+                    alt=""
+                    class="sm-icon"
+                  />
+                </a>
+                <a href="#">
+                  <img
+                    src="/menu page/images/icon/youtube .png"
+                    alt=""
+                    class="sm-icon"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script>
+      function toggleMenu(x) {
+        x.classList.toggle("change");
+        var checkContent = document.querySelector(".menu-nav ");
+        checkContent.classList.toggle("show");
+      }
+    </script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>

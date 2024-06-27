@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="/style.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      .gray {
+        color: gray;
+      }
+      .red {
+        color: red;
+      }
+      .hidden {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div style="margin: 0 auto; width: 550px">
+      <div class="roll-option">see advanced roll option +</div>
+      <!-- select quantity -->
+      <div class="right-lower-part strech">
+        <div class="left-select-qty">
+          <div class="selct-qty-heading">
+            <span class="selct-qtyy"> Select Quantity </span>
+            <span class="start-color"> * </span>
+            <p class="a500-mim"><i>500 minimum</i></p>
+          </div>
+        </div>
+        <div class="right-select-qty">
+          <!-- row1 -->
+          <div class="select-box1 strech">
+            <span><i class="fa-solid fa-circle"></i></span>
+            <div class="selct-row1">500</div>
+            <div class="selct-row2">$272.13</div>
+            <div class="select-row3">($0.54/label)</div>
+          </div>
+          <!-- row2 -->
+          <div class="select-box1 strech" id="row2">
+            <span>
+              <i class="fa-solid fa-circle"></i>
+            </span>
+            <div class="selct-row1">1000</div>
+            <div class="selct-row2">$272.13</div>
+            <div class="select-row3">($0.29/label)</div>
+          </div>
+          <!-- row3 -->
+          <div class="select-box1 bottom-remove strech" id="row3">
+            <span>
+              <i class="fa-solid fa-circle"></i>
+            </span>
+            <div class="selct-row1">1500</div>
+            <div class="selct-row2">$272.13</div>
+            <div class="select-row3">($0.26/label)</div>
+          </div>
+          <!-- Hidden rows -->
+          <div class="hidden" id="hiddenRows">
+            <!-- row4 -->
+            <div class="select-box1 strech" id="row4">
+              <span>
+                <i class="fa-solid fa-circle gray"></i>
+              </span>
+              <div class="selct-row1">1000</div>
+              <div class="selct-row2">$272.13</div>
+              <div class="select-row3">($0.29/label)</div>
+            </div>
+            <!-- row5 -->
+            <div class="select-box1 strech" id="row5">
+              <span>
+                <i class="fa-solid fa-circle gray"></i>
+              </span>
+              <div class="selct-row1">1000</div>
+              <div class="selct-row2">$272.13</div>
+              <div class="select-row3">($0.29/label)</div>
+            </div>
+            <!-- row6 -->
+            <div class="select-box1 strech" id="row6">
+              <span>
+                <i class="fa-solid fa-circle gray"></i>
+              </span>
+              <div class="selct-row1">1000</div>
+              <div class="selct-row2">$272.13</div>
+              <div class="select-row3">($0.29/label)</div>
+            </div>
+            <!-- row7 -->
+            <div class="select-box1 strech" id="row7">
+              <span>
+                <i class="fa-solid fa-circle gray"></i>
+              </span>
+              <div class="selct-row1">1000</div>
+              <div class="selct-row2">$272.13</div>
+              <div class="select-row3">($0.29/label)</div>
+            </div>
+          </div>
+          <div class="popular-qty" id="toggleRows">
+            See more popular quantities +
+          </div>
+          <div>
+            <span> <i class="fa-solid fa-circle gray"></i></span>
+            <span class="input-foil-labels"
+              ><input type="text" placeholder="Enter Custom"
+            /></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document
+        .getElementById("toggleRows")
+        .addEventListener("click", function () {
+          const hiddenRows = document.getElementById("hiddenRows");
+          hiddenRows.classList.toggle("hidden");
+          const toggleButton = document.getElementById("toggleRows");
+          const hiddenRowsVisible = !hiddenRows.classList.contains("hidden");
+          toggleButton.textContent = hiddenRowsVisible
+            ? "Hide more popular quantities -"
+            : "See more popular quantities +";
+        });
+
+      // Get all elements with the class name 'select-box1'
+      const selectBoxes = document.querySelectorAll(".select-box1");
+
+      // Iterate through each select box and add a click event listener
+      selectBoxes.forEach((box) => {
+        box.addEventListener("click", () => {
+          // Remove 'red' class from all icons
+          const icons = document.querySelectorAll(".fa-circle");
+          icons.forEach((icon) => {
+            icon.classList.remove("red");
+          });
+          // Add 'red' class to the clicked icon
+          const clickedIcon = box.querySelector(".fa-circle");
+          clickedIcon.classList.add("red");
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Popup Example</title>
+    <style>
+      /* Styling for the popup */
+      .popup {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: white;
+        padding: 20px;
+        border: 1px solid #ccc;
+        z-index: 1000;
+      }
+
+      /* Styling for the close button */
+      .close {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="popupTrigger">
+      <img
+        src="/images/dropdown-section/foil-stamp-section/Custom 3 (1).png"
+      /><br />
+      <span>Add custom</span>
+    </div>
+
+    <div id="popup" class="popup">
+      <!-- Close button -->
+      <span class="close" onclick="togglePopup()">&times;</span>
+      <!-- Popup content goes here -->
+      This is the popup content. You can add any content you want here.
+    </div>
+
+    <script>
+      // Get the popup element and the trigger element
+      var popup = document.getElementById("popup");
+      var popupTrigger = document.getElementById("popupTrigger");
+
+      // Function to toggle the visibility of the popup
+      function togglePopup() {
+        if (popup.style.display === "block") {
+          popup.style.display = "none";
+        } else {
+          popup.style.display = "block";
+        }
+      }
+
+      // Add event listener to trigger element
+      popupTrigger.addEventListener("click", togglePopup);
+    </script>
+  </body>
+</html>

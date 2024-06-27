@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accordiom</title>
+    <style>
+      .accordiom-title {
+        padding: 10px;
+        width: 80%;
+        margin: 0 auto;
+        background-color: #000;
+        color: #fff;
+      }
+      .accordiom-content {
+        background-color: #fff;
+        color: #000;
+        max-height: 0;
+        display: none;
+        transition: 0.3s max-height ease;
+        overflow: hidden;
+        padding: 10px;
+        width: 80%;
+        margin: 0 auto;
+        border: 1px solid skyblue;
+        text-align: center;
+      }
+      .accordiom-content.active {
+        display: block;
+        max-height: 300px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="accordiom">
+      <div class="accordiom-title">section 1</div>
+      <div class="accordiom-content">
+        <p>hello world</p>
+      </div>
+    </div>
+    <div class="accordiom">
+      <div class="accordiom-title">section 2</div>
+      <div class="accordiom-content">
+        <p>hello world</p>
+      </div>
+    </div>
+    <script>
+      const header = document.querySelectorAll('.accordiom-title');
+      const contents = document.querySelectorAll('.accordiom-content');
+      header.forEach((title) => {
+        title.addEventListener('click', () => {
+          const accordiom = title.parentElement;
+          const accContent = accordiom.querySelector('accordiom-content');
+          content.classList.toggle('active');
+        });
+        if (content.classList.contains('active')) {
+          content.style.maxHeight = content.scrollHeight + 'px';
+        } else {
+          accordionContent.style.maxHeight = '0';
+        }
+      });
+    </script>
+  </body>
+</html>
